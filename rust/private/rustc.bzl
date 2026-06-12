@@ -1472,10 +1472,10 @@ def setup_zself_profile(ctx, crate_info):
             - File: The declared self-profile directory, or None if disabled.
             - list[str]: The self-profile flags to pass to rustc.
     """
-    if not hasattr(ctx.attr, "_zself_profile_events") or ZSelfProfileEventsInfo not in ctx.attr._zself_profile_events:
+    if not hasattr(ctx.attr, "zself_profile_events") or ZSelfProfileEventsInfo not in ctx.attr.zself_profile_events:
         return None, []
 
-    events_info = ctx.attr._zself_profile_events[ZSelfProfileEventsInfo].events
+    events_info = ctx.attr.zself_profile_events[ZSelfProfileEventsInfo].events
 
     is_self_profile_enabled = False
     event_types_to_use = None

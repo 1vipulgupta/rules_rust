@@ -853,13 +853,13 @@ _COMMON_ATTRS = {
         doc = "A version to inject in the cargo environment variable.",
         default = "0.0.0",
     ),
+    "zself_profile_events": attr.label(
+        doc = "Passes -Zself-profile and -Zself-profile-events flag to rustc, requires a nightly toolchain.",
+        default = Label("//rust/settings:zself_profile_events"),
+    ),
     "_collect_cfgs": attr.label(
         doc = "Enable collection of cfg flags with results stored in CrateInfo.cfgs.",
         default = Label("//rust/settings:collect_cfgs"),
-    ),
-    "_zself_profile_events": attr.label(
-        doc = "Passes -Zself-profile and -Zself-profile-events flag to rustc, requires a nightly toolchain.",
-        default = Label("//rust/settings:zself_profile_events"),
     ),
 } | RUSTC_ATTRS | RUSTC_ALLOCATOR_LIBRARIES_ATTRS
 

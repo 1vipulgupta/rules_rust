@@ -30,6 +30,7 @@ load(
     _TestCrateInfo = "TestCrateInfo",
     _UnstableRustFeaturesInfo = "UnstableRustFeaturesInfo",
 )
+load("//rust/private:rustc.bzl", _ZSelfProfileEventsInfo = "ZSelfProfileEventsInfo")
 
 BuildInfo = _BuildInfo
 ClippyInfo = _ClippyInfo
@@ -39,7 +40,7 @@ DepInfo = _DepInfo
 DepVariantInfo = _DepVariantInfo
 TestCrateInfo = _TestCrateInfo
 UnstableRustFeaturesInfo = _UnstableRustFeaturesInfo
-
+ZSelfProfileEventsInfo = _ZSelfProfileEventsInfo
 COMMON_PROVIDERS = _COMMON_PROVIDERS
 
 rust_common = _rust_common
